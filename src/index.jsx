@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import App from './App'
 
@@ -24,9 +24,9 @@ function Routed() {
   )
 }
 
-ReactDOM.render(
-  <BrowserRouter>
-    <Routed/>
-  </BrowserRouter>, document.getElementById('root'))
-
-console.log('App loaded.');
+export default function main() {
+  render(
+    <BrowserRouter>
+      <Routed/>
+    </BrowserRouter>, document.getElementById('root'))
+}
