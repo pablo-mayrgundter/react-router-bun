@@ -1,0 +1,28 @@
+{
+  "name": "react-router-bun",
+  "version": "1.0.0",
+  "description": "Minimal React app with router using bun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablo-mayrgundter/react-router-bun.git"
+  },
+  "keywords": [
+    "react",
+    "js"
+  ],
+  "author": "Pablo Mayrgundter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pablo-mayrgundter/react-router-bun/issues"
+  },
+  "homepage": "https://github.com/pablo-mayrgundter/react-router-bun/#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  }
+}
