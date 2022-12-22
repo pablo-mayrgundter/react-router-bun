@@ -1,21 +1,21 @@
-import React from 'react';
-import {render} from 'react-dom';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import React, {useEffect} from 'react'
+import {createRoot} from 'react-dom/client'
+import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom'
 import App from './App'
 
 
 function Routed() {
-  const nav = useNavigate();
+  const nav = useNavigate()
 
-  React.useEffect(() => {
-    const referrer = document.referrer;
+  useEffect(() => {
+    const referrer = document.referrer
     if (referrer) {
-      const path = new URL(document.referrer).pathname;
+      const path = new URL(document.referrer).pathname
       if (path.length > 1) {
-        nav(path);
+        nav(path)
       }
     }
-  }, []);
+  }, [])
 
   return (
     <Routes>
@@ -25,8 +25,11 @@ function Routed() {
 }
 
 export default function main() {
-  render(
+  const root = createRoot(document.getElementById('root'))
+  root.render(
     <BrowserRouter>
       <Routed/>
-    </BrowserRouter>, document.getElementById('root'))
+    </BrowserRouter>)
 }
+
+main()

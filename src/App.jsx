@@ -1,15 +1,15 @@
-import React, { Suspense } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, {Suspense, useEffect, useState} from 'react'
+import {useLocation} from 'react-router-dom'
 const Panel = React.lazy(() => import('./Panel'))
 
 
 function App() {
-  const location = useLocation();
-  const [path, setPath] = React.useState('');
+  const location = useLocation()
+  const [path, setPath] = useState('')
 
-  React.useEffect(() => {
-    setPath(location.pathname);
-  }, [location]);
+  useEffect(() => {
+    setPath(location.pathname)
+  }, [location])
 
   return (
     <div>
@@ -19,7 +19,7 @@ function App() {
         <Panel/>
       </Suspense>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
